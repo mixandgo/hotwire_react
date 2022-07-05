@@ -1,14 +1,22 @@
-<h1 class="font-bold text-2xl mb-12">Welcome</h1>
-
 <div class="grid grid-cols-12 gap-8">
-  <div class="col-span-3">
+  <div class="col-span-4">
     <h2 class="font-bold text-xl mb-8">Registration</h2>
     <hr />
   <div id="login-form" class="pt-4"></div>
   </div>
-  <div class="col-span-8">
+  <div class="col-span-7">
     <h2 class="font-bold text-xl mb-8">New users</h2>
     <hr />
-    <div id="new-users" class="grid grid-cols-2 gap-4 pt-4"></div>
+    <table class="mt-4 table-auto w-full">
+      <tr>
+        <thead>
+          <th class="text-left font-bold">Email</th>
+          <th class="text-left font-bold">Date</th>
+        </thead>
+        <tbody id="new-users">
+          <%= render @users %>
+        </tbody>
+      </tr>
+    </table>
   </div>
 </div>

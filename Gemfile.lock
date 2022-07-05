@@ -86,6 +86,8 @@ GEM
       warden (~> 1.2.3)
     digest (3.1.0)
     erubi (1.10.0)
+    faker (2.21.0)
+      i18n (>= 1.8.11, < 2)
     globalid (1.0.0)
       activesupport (>= 5.0)
     i18n (1.10.0)
@@ -204,6 +206,7 @@ DEPENDENCIES
   cssbundling-rails
   debug
   devise (~> 4.8)
+  faker
   jbuilder
   jsbundling-rails
   puma (~> 5.0)

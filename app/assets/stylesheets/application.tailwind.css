@@ -13,3 +13,41 @@ ul {
 .flash-notice {
   @apply bg-lime-200 p-8 rounded;
 }
+
+/* https://edforshaw.co.uk/hotwire-turbo-stream-animations */
+.animate-in {
+  overflow: hidden;
+  animation: fade-in 0.25s ease-out, slide-down 0.25s ease-out;
+}
+
+.slide-in {
+  animation: fade-in 0.25s ease-out, slide-in 0.25s ease-out;
+}
+
+@keyframes slide-down {
+  from {
+    max-height: 0;
+  }
+
+  to {
+    max-height: 600px;
+  }
+}
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+@keyframes slide-in {
+  from {
+    transform: translateX(4rem);
+  }
+
+  to {
+    transform: translateX(0);
+  }
+}

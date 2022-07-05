@@ -8,20 +8,19 @@ import {
   Box,
   Button,
   InputLeftElement,
-  FormErrorMessage,
   FormHelperText,
 } from '@chakra-ui/react';
 import { EmailIcon } from '@chakra-ui/icons';
 import { motion } from "framer-motion";
 
-export type LoginFormProps = { token?: string };
+export type RegistrationProps = { token?: string };
 
-export class LoginForm extends Component<LoginFormProps> {
+export class RegistrationForm extends Component<RegistrationProps> {
   readonly email: React.RefObject<HTMLInputElement>;
   private password: React.RefObject<HTMLInputElement>;
   private passwordConfirmation: React.RefObject<HTMLInputElement>;
 
-  constructor(props: LoginFormProps) {
+  constructor(props: RegistrationProps) {
     super(props);
     this.email = React.createRef();
     this.password = React.createRef();
@@ -77,7 +76,7 @@ export class LoginForm extends Component<LoginFormProps> {
                   pointerEvents='none'
                   children={<EmailIcon color='gray.300' />}
                 />
-                <Input id='email' type='email' ref={this.email} />
+                <Input id='email' type='email' ref={this.email} bg="white" />
               </InputGroup>
             <FormHelperText>We'll never share your email.</FormHelperText>
             </FormControl>
@@ -85,14 +84,14 @@ export class LoginForm extends Component<LoginFormProps> {
           <Box mb={8}>
             <FormControl>
               <FormLabel htmlFor='password'>Password</FormLabel>
-              <Input id='password' type='password' ref={this.password} />
+              <Input id='password' type='password' ref={this.password} bg="white" />
               <FormHelperText>Make it hard to guess.</FormHelperText>
             </FormControl>
           </Box>
           <Box mb={8}>
             <FormControl>
               <FormLabel htmlFor='password-confirmation'>Password confirmation</FormLabel>
-              <Input id='password-confirmation' type='password' ref={this.passwordConfirmation} />
+              <Input id='password-confirmation' type='password' ref={this.passwordConfirmation} bg="white" />
               <FormHelperText>Make it hard to guess.</FormHelperText>
             </FormControl>
           </Box>
