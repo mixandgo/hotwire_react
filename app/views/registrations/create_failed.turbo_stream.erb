@@ -1,0 +1,11 @@
+<%= turbo_stream.update "flash" do %>
+  <div class="flash-notice">
+    <div class="font-bold mb-4">Oops! Something's not right...</div>
+    <div>Couldn't save this user. Here's why:</div>
+    <ul>
+      <% @user.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+    </ul>
+  </div>
+<% end %>
