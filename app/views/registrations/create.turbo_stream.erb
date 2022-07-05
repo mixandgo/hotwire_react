@@ -2,3 +2,9 @@
   <div><span class="font-bold">Email:</span> <%= @user.email %></div>
   <div><span class="font-bold">Date:</span> <%= @user.created_at.to_formatted_s(:short) %></div>
 <% end %>
+<%= turbo_stream.update "flash" do %>
+  <div class="flash-notice">
+    <div class="font-bold mb-4">Yey! This one went well...</div>
+    <div>A new user has signed up.</div>
+  </div>
+<% end %>

@@ -6,6 +6,10 @@ ul {
   @apply list-disc list-inside;
 }
 
-.flash-notice {
+.flash-alert {
   @apply bg-amber-100 p-8 rounded;
+}
+
+.flash-notice {
+  @apply bg-lime-200 p-8 rounded;
 }

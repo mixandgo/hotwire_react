@@ -61,8 +61,13 @@ export class LoginForm extends Component<LoginFormProps> {
 
   render() {
     return (
-      <motion.div>
-
+      <Box
+        as={motion.div}
+        bg='gray.50'
+        p='4'
+        whileHover={{ scale: 1.1 }}
+        transition='0.1s linear'
+      >
         <form action="/users" method="post" onSubmit={this.onSubmit}>
           <Box mb={8}>
           <FormControl>
@@ -93,7 +98,6 @@ export class LoginForm extends Component<LoginFormProps> {
           </Box>
           <Button colorScheme='blue' onClick={this.onSubmit}>Submit</Button>
         </form>
-
-      </motion.div>
+      </Box>
     )}
 }
