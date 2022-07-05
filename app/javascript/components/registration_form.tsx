@@ -66,6 +66,7 @@ export class RegistrationForm extends Component<RegistrationProps> {
         p='4'
         whileHover={{ scale: 1.1 }}
         transition='0.1s linear'
+        className='drop-shadow-2xl rounded'
       >
         <form action="/users" method="post" onSubmit={this.onSubmit}>
           <Box mb={8}>
