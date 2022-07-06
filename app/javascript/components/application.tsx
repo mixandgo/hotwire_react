@@ -3,19 +3,10 @@ import ReactDOM from "react-dom/client"
 import { RegistrationForm } from "./registration_form"
 import { ChakraProvider } from '@chakra-ui/react'
 
-
-const App = (props) => {
-  return (
-    <>
-      <RegistrationForm {...props} />
-    </>
-  );
-};
-
 document.addEventListener("DOMContentLoaded", () => {
   const token = document.querySelector('meta[name="csrf-token"]').content;
-  const registrationForm = ReactDOM.createRoot(document.getElementById("login-form"));
+  const registrationForm = ReactDOM.createRoot(document.getElementById("registration-form"));
   registrationForm.render(
-    <ChakraProvider><App token={token} /></ChakraProvider>
+    <ChakraProvider><RegistrationForm token={token} /></ChakraProvider>
   );
 });

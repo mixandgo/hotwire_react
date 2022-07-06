@@ -1,5 +1,5 @@
 class SiteController < ApplicationController
   def index
-    @users = User.all
+    @users = User.order(created_at: :desc).all
   end
 end
